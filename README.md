@@ -53,13 +53,12 @@ decisiones posteriores:
    color/texto se verifican contra **WCAG 2.1** (objetivo AAA donde es posible,
    AA como mínimo), y la interfaz funciona en tema claro y oscuro.
 
-Estos principios se materializan en un **sistema de tokens único** (definido en
-`frontend/src/styles/00-settings/`) que gobierna a la vez Figma y el código, de
+Estos principios se materializan en un **sistema de variables único**  que gobierna a la vez Figma y el código, de
 modo que diseño e implementación nunca divergen.
 
 ### Moodboard — dirección visual y emocional
 
-![Moodboard de Fluster — Gestión de contenedores · Control de estado](img/moodboard.png)
+![Moodboard de Fluster — Gestión de contenedores · Control de estado](img/principios/moodboard.png)
 
 El moodboard —titulado **«Gestión de contenedores · Control de estado»**— fija la
 dirección visual y emocional del producto **antes** de definir el color y la tipografía,
@@ -90,16 +89,16 @@ La **guía de estilos** (*style guide*) consolida en un único lienzo todos los 
 del sistema —iconos, tipografía, inputs, bordes/sombras, colores y espaciado— en sus dos
 temas. Es la **base** del sistema visual: las secciones de **color (§2)** y **tipografía
 (§3)** que siguen **desglosan y justifican** lo que aquí se consolida. Sus valores son
-exactamente los `--tokens` definidos en `frontend/src/styles/00-settings/`, no copias, de
+exactamente los `--variables` del sistema, no copias, de
 modo que diseño e implementación nunca divergen.
 
-![Guía de estilos visual de Fluster](img/guia-estilos.png)
+![Guía de estilos visual de Fluster](img/principios/guia-estilos.png)
 
 **Por qué es coherente y por qué importa:**
 
-- **Refleja el sistema de tokens, no lo duplica.** Los colores (Primario, Texto, Semáforo,
+- **Refleja el sistema de variables, no lo duplica.** Los colores (Primario, Texto, Semáforo,
   Auxiliar), la escala tipográfica y los espaciados del lienzo son los mismos valores
-  definidos en `frontend/src/styles/00-settings/` (§2, §3): **diseño e implementación nunca
+  definidos en el sistema (§2, §3): **diseño e implementación nunca
   divergen**.
 - **Documenta estados, no solo valores.** Muestra los componentes en sus variantes —botones
   (*hover / default / off*), inputs (normal / error / foco), checkbox—, base de la
@@ -150,7 +149,7 @@ visual** (un único color de marca, no una paleta dispersa) manteniendo a la vez
 jerarquía entre acciones primarias y superficies secundarias (botones, tarjetas de
 semáforo, contenedor y usuario).
 
-| Token | Claro | Oscuro | Contraste verificado |
+| Variable | Claro | Oscuro | Contraste verificado |
 |---|---|---|---|
 | `--color-secondary` | `#5BB6F8` | `#155A93` | **AAA** — 9.3:1 (claro, texto oscuro) · 7.2:1 (oscuro, texto blanco) |
 | `--color-secondary-hover` | `#7CC5FA` | `#114A7C` | — |
@@ -165,7 +164,7 @@ semáforo, contenedor y usuario).
 Se emplea una base **gris muy neutra** (casi blanca en claro, casi negra en oscuro)
 para que el azul de marca y los colores de estado destaquen sin ruido de fondo.
 
-| Token | Claro | Oscuro | Uso |
+| Variable | Claro | Oscuro | Uso |
 |---|---|---|---|
 | `--color-bg` | `#F9FAFB` | `#111827` | Fondo de página |
 | `--color-surface` | `#FFFFFF` | `#1F2937` | Tarjetas, paneles, modales |
@@ -180,7 +179,7 @@ los días de detención y demora (D&D)**. Para ello se adopta la metáfora unive
 **semáforo**, que no requiere aprendizaje: cualquier usuario interpreta verde →
 amarillo → rojo sin instrucciones.
 
-| Estado | Token | Color | Significado |
+| Estado | Variable | Color | Significado |
 |---|---|---|---|
 | Sin costes | `--color-sin_costes` |  `#35C65B` | Dentro del período gratuito |
 | Primer tramo | `--color-primer_tramo` |  `#FFFC4B` | Próximo al límite de días libres |
@@ -188,7 +187,7 @@ amarillo → rojo sin instrucciones.
 | Inactivo | `--color-inactivo` |  `#B0AEAE` | Contenedor sin ciclo activo |
 
 > **Decisión clave de accesibilidad:** estos cuatro colores están pensados como
-> **fondo** (con texto encima). Para **texto** sobre fondos neutros se definen tokens
+> **fondo** (con texto encima). Para **texto** sobre fondos neutros se definen variables
 > *theme-aware* independientes y verificados —`--color-error-text` (`#8A1A14` / `#FFB4AB`),
 > `--color-success-text` (`#0E5C2B` / `#4ADE80`), `--color-enlace` (`#155A93` / `#7CC5FA`)—
 > porque el rojo y el verde del semáforo, óptimos como fondo, **no alcanzaban el
@@ -220,7 +219,7 @@ prioridad:
 - **Un solo tono de marca** (azul) → identidad cohesionada y "espacio cromático" libre
   para la señalización.
 - **Verde/amarillo/rojo/gris** reservados a estado → lectura instantánea del riesgo D&D.
-- **Tokens de texto separados de los de fondo** → cumplimiento WCAG AA/AAA en los dos
+- **Variables de texto separadas de las de fondo** → cumplimiento WCAG AA/AAA en los dos
   temas, comprobado par a par.
 
 ---
@@ -229,14 +228,13 @@ prioridad:
 
 Fluster combina **dos familias** con roles bien diferenciados:
 
-| Rol | Familia | Token | Clasificación |
+| Rol | Familia | Variable | Clasificación |
 |---|---|---|---|
 | Títulos (`h1`–`h6`) | **Crimson Text** | `--font-heading` | Serif (Google Fonts) |
 | Cuerpo, datos, UI | **Arimo** | `--font-body` | Sans-serif (métrica de Arial) |
 
 > Implementación real: `$font-heading: 'Crimson Text', serif` y
-> `$font-body: 'Arimo', Arial, sans-serif`
-> (`frontend/src/styles/00-settings/_variables.scss`), precargadas de forma no
+> `$font-body: 'Arimo', Arial, sans-serif`, precargadas de forma no
 > bloqueante en `index.html`.
 
 ### 3.1 Por qué una serif para los títulos
@@ -268,7 +266,7 @@ Los tamaños son múltiplos de 8 px (`0.5rem`), **el mismo módulo que el sistem
 espaciado**. Esta coherencia hace que tipografía y maquetación "encajen" en una
 retícula común.
 
-| Token | px | Uso típico |
+| Variable | px | Uso típico |
 |---|---|---|
 | `--text-12` | 12 | Cabeceras de tabla, texto auxiliar |
 | `--text-14` | 14 | Texto secundario (hint, error, botones pequeños) |
@@ -344,7 +342,7 @@ consistencia visual** y su **estructura de la información**:
 
 **Paso 1 · Inicio (Home del operador)**
 
-![Paso 1 — Home del operador](img/flujo-a-1-home.png)
+![Paso 1 — Home del operador](img/flujos/flujo-a-1-home.png)
 
 Tras iniciar sesión, el operador aterriza en su página de inicio. El *hero*
 **«Introduce contenedores»** y el menú superior (**Meter contenedor · Contenedores ·
@@ -353,7 +351,7 @@ Fluster» recuerda, entre las capacidades, el alta de **contenedores mediante OC
 
 **Paso 2 · Listado de contenedores**
 
-![Paso 2 — Listado de contenedores](img/flujo-a-2-contenedores.png)
+![Paso 2 — Listado de contenedores](img/flujos/flujo-a-2-contenedores.png)
 
 El operador abre **Contenedores** y ve las unidades que ya ha registrado, con un
 **Buscador rápido** para localizarlas. Para dar de alta una nueva, pulsa **«Meter
@@ -361,7 +359,7 @@ contenedor»** en el menú.
 
 **Paso 3 · Pantalla de alta (elección de vía)**
 
-![Paso 3 — Meter contenedor](img/flujo-a-3-meter-contenedor.png)
+![Paso 3 — Meter contenedor](img/flujos/flujo-a-3-meter-contenedor.png)
 
 La pantalla ofrece **dos vías paralelas**: **Escaneo Inteligente (OCR)** —arrastrar o
 seleccionar una foto JPG/PNG— y **Entrada Manual** —teclear el código BIC—. El bloque
@@ -370,7 +368,7 @@ del contenedor** en la zona punteada.
 
 **Paso 4 · Verificación del código detectado**
 
-![Paso 4 — Resultado del OCR](img/flujo-a-4-meter-contenedor-ocr.png)
+![Paso 4 — Resultado del OCR](img/flujos/flujo-a-4-meter-contenedor-ocr.png)
 
 El sistema muestra la **previsualización de la foto** y rellena automáticamente el campo
 **«Código BIC obtenido»** (en el ejemplo, `HGTU2617083`). El campo es **editable** para
@@ -379,7 +377,7 @@ corregir cualquier carácter mal reconocido; el operador lo verifica y pulsa
 
 **Paso 5 · Contenedor registrado**
 
-![Paso 5 — Listado actualizado](img/flujo-a-5-contenedores-actualizado.png)
+![Paso 5 — Listado actualizado](img/flujos/flujo-a-5-contenedores-actualizado.png)
 
 Al confirmar, la aplicación devuelve al operador a su listado, ahora con la **nueva
 unidad ya incluida** (`HGTU2617083`), cerrando el bucle de la tarea.
@@ -409,21 +407,21 @@ unidad ya incluida** (`HGTU2617083`), cerrando el bucle de la tarea.
 
 **Paso 1 · Inicio (Home pública)**
 
-![Paso 1 — Home pública](img/flujo-b-1-home.png)
+![Paso 1 — Home pública](img/flujos/flujo-b-1-home.png)
 
 El gestor llega a la página pública de Fluster y pulsa **«Iniciar sesión»** (o «Empieza
 ahora») para acceder.
 
 **Paso 2 · Iniciar sesión**
 
-![Paso 2 — Iniciar sesión](img/flujo-b-2-login.png)
+![Paso 2 — Iniciar sesión](img/flujos/flujo-b-2-login.png)
 
 Introduce su **correo** y **contraseña**. Al autenticarse con rol de gestor, el sistema
 lo dirige a su área de trabajo.
 
 **Paso 3 · Semáforo — estado de los contenedores**
 
-![Paso 3 — Semáforo](img/flujo-b-3-semaforo.png)
+![Paso 3 — Semáforo](img/flujos/flujo-b-3-semaforo.png)
 
 Vista central del gestor: los contenedores aparecen **agrupados por nivel de riesgo
 D&D** en columnas de color —**sin coste aplicado** (verde), **primer tramo** (amarillo),
@@ -433,7 +431,7 @@ unidad, el gestor usa los **controles de estado de su tarjeta**.
 
 **Paso 4 · Estado movido (tablero actualizado)**
 
-![Paso 4 — Semáforo actualizado](img/flujo-b-4-semaforo-actualizado.png)
+![Paso 4 — Semáforo actualizado](img/flujos/flujo-b-4-semaforo-actualizado.png)
 
 Al mover el contenedor, el tablero lo **recoloca en la columna del nuevo tramo** y
 actualiza al instante su color y su coste asociado, reflejando el nuevo nivel de riesgo
@@ -465,20 +463,20 @@ sin recargar la página.
 
 **Paso 1 · Inicio (Home pública)**
 
-![Paso 1 — Home pública](img/flujo-c-1-home.png)
+![Paso 1 — Home pública](img/flujos/flujo-c-1-home.png)
 
 El administrador accede a la página pública de Fluster y pulsa **«Iniciar sesión»**.
 
 **Paso 2 · Iniciar sesión**
 
-![Paso 2 — Iniciar sesión](img/flujo-c-2-login.png)
+![Paso 2 — Iniciar sesión](img/flujos/flujo-c-2-login.png)
 
 Introduce sus credenciales. Al autenticarse con rol de administrador, el sistema le da
 acceso al panel de administración.
 
 **Paso 3 · Panel de control**
 
-![Paso 3 — Panel de control](img/flujo-c-3-panel-de-control.png)
+![Paso 3 — Panel de control](img/flujos/flujo-c-3-panel-de-control.png)
 
 Vista de administración con las **tarjetas de los usuarios** (nombre, correo y rol), un
 **Buscador rápido** y, en cada tarjeta, el selector de rol **Admin · Gestor ·
@@ -488,7 +486,7 @@ rol, el admin pulsa el botón del rol deseado en la tarjeta del usuario.
 
 **Paso 4 · Rol actualizado**
 
-![Paso 4 — Panel actualizado](img/flujo-c-4-panel-actualizado.png)
+![Paso 4 — Panel actualizado](img/flujos/flujo-c-4-panel-actualizado.png)
 
 La tarjeta del usuario **refleja el nuevo rol de inmediato**, en la propia vista y sin
 recargar, confirmando el cambio de permisos.
@@ -510,14 +508,14 @@ recargar, confirmando el cambio de permisos.
 El diseño de Fluster es **sistemático y justificable en cada capa**:
 
 - **Color** — un azul de marca que libera el espectro verde/amarillo/rojo para la
-  señalización D&D, con tokens de texto separados de los de fondo y contraste WCAG
+  señalización D&D, con variables de texto separadas de las de fondo y contraste WCAG
   verificado en temas claro y oscuro.
 - **Tipografía** — pareja serif (Crimson Text) + sans (Arimo) que separa "encabezado"
   de "dato", sobre una escala de 8 px coherente con el espaciado.
 - **Flujos** — un *user flow* por rol (operador, gestor, admin) que cubre el ciclo
   completo del producto: **dar de alta**, **mover de estado** y **administrar**.
 
-Todo ello se apoya en un **sistema de tokens único** compartido por Figma y el código,
+Todo ello se apoya en un **sistema de variables único** compartido por Figma y el código,
 lo que garantiza que la justificación de este documento se corresponde exactamente con
 lo que se renderiza en la aplicación.
 
