@@ -309,6 +309,16 @@ roles** del sistema, demostrando que el diseño cubre el ciclo completo del prod
 El acceso a cada pantalla está protegido por rol (`RutaProtegida`), de modo que cada
 flujo solo es accesible para el rol que lo necesita.
 
+### Diagrama de flujo de usuario
+
+![Diagrama de flujo de usuario — Fluster](img/flujos/diagrama-flujo-usuario.png)
+
+**Estas fueron las necesidades principales que encontré a la hora de utilizar mi
+aplicación.** El diagrama recoge, de principio a fin, los recorridos que cada rol
+necesita completar; de ese análisis nacen los flujos que se documentan a continuación,
+pantalla a pantalla. Versión navegable en FigJam:
+[Diagrama de Flujo — Fluster](https://www.figma.com/board/RElpnz7nwahpUixOCr4vMq/Diagrama-de-Flujo---Fluster?node-id=124-651).
+
 ### Flujos completos por rol (página a página)
 
 Además de los tres flujos de tarea (A/B/C) descritos abajo, cada rol tiene documentado su
@@ -337,6 +347,15 @@ consistencia visual** y su **estructura de la información**:
 | **Rol** | Operador |
 | **Objetivo** | Registrar una nueva unidad en el sistema con el mínimo esfuerzo y error |
 | **Prototipo** | [Prototipo A navegable](https://www.figma.com/proto/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1326-10042&scaling=min-zoom&content-scaling=fixed&page-id=4%3A5&starting-point-node-id=1326%3A10042) |
+| **Componente (Figma)** | [Flujo - A (introducir contenedor)](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1264-13991&t=AnHUYd7ucHo2HIGm-1) |
+
+![Prototipo A — el operador entra ya autenticado en su home privada](img/flujos/prototipo-a-operador.png)
+
+> **⚠️ Acceso al prototipo — se entra ya logueado.** A diferencia de los flujos B y C,
+> este **primer flujo arranca con el operador ya autenticado**: el prototipo entra
+> directamente en la **home privada del operador** (menú *Meter contenedor · Contenedores ·
+> Perfil*), **sin pasar por la pantalla de inicio de sesión**. Para recorrerlo, accede a la
+> página de Figma **ya logueado** —o inicia sesión— y partirás de esta pantalla.
 
 **Recorrido paso a paso**
 
@@ -400,8 +419,10 @@ unidad ya incluida** (`HGTU2617083`), cerrando el bucle de la tarea.
 |---|---|
 | **Rol** | Gestor |
 | **Objetivo** | Avanzar un contenedor entre tramos del ciclo D&D y ver el impacto en el semáforo |
-
 | **Prototipo** | [Prototipo B navegable](https://www.figma.com/proto/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-56449&scaling=min-zoom&content-scaling=fixed&page-id=4%3A5&starting-point-node-id=1335%3A56449) |
+| **Componente (Figma)** | [Flujo - B (Mover un estado del contenedor)](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1326-19837&t=AnHUYd7ucHo2HIGm-1) |
+
+![Prototipo B — el gestor parte de la home pública e inicia sesión](img/flujos/prototipo-b-gestor.png)
 
 **Recorrido paso a paso**
 
@@ -458,6 +479,9 @@ sin recargar la página.
 | **Objetivo** | Gestionar permisos cambiando el rol asignado a un usuario |
 | **Diseño** | [Flujo C en Figma](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-52693) |
 | **Prototipo** | [Prototipo C navegable](https://www.figma.com/proto/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-56321&scaling=min-zoom&content-scaling=fixed&page-id=4%3A5&starting-point-node-id=1335%3A56321) |
+| **Componente (Figma)** | [Flujo - C (Editar el Rol de un usuario)](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-52693&t=AnHUYd7ucHo2HIGm-1) |
+
+![Prototipo C — el administrador parte de la home pública e inicia sesión](img/flujos/prototipo-c-admin.png)
 
 **Recorrido paso a paso**
 
