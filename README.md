@@ -349,6 +349,15 @@ consistencia visual** y su **estructura de la información**:
 | **Prototipo** | [Prototipo A navegable](https://www.figma.com/proto/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1326-10042&scaling=min-zoom&content-scaling=fixed&page-id=4%3A5&starting-point-node-id=1326%3A10042) |
 | **Componente (Figma)** | [Flujo - A (introducir contenedor)](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1264-13991&t=AnHUYd7ucHo2HIGm-1) |
 
+**Propósito**
+
+Permitir al operador **dar de alta una unidad con el mínimo esfuerzo y margen de error**,
+convirtiendo la transcripción manual del código BIC (11 caracteres alfanuméricos) en una
+simple **verificación** asistida por OCR. Responde al principio de **prevención de errores**
+y a la **reducción de la carga de memoria** del usuario: el sistema reconoce el dato a partir
+de la foto en lugar de exigir que el operador lo recuerde y lo teclee, y degrada con elegancia
+a entrada manual si el reconocimiento falla.
+
 ![Prototipo A — el operador entra ya autenticado en su home privada](img/flujos/prototipo-a-operador.png)
 
 > **⚠️ Acceso al prototipo — se entra ya logueado.** A diferencia de los flujos B y C,
@@ -422,6 +431,15 @@ unidad ya incluida** (`HGTU2617083`), cerrando el bucle de la tarea.
 | **Prototipo** | [Prototipo B navegable](https://www.figma.com/proto/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-56449&scaling=min-zoom&content-scaling=fixed&page-id=4%3A5&starting-point-node-id=1335%3A56449) |
 | **Componente (Figma)** | [Flujo - B (Mover un estado del contenedor)](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1326-19837&t=AnHUYd7ucHo2HIGm-1) |
 
+**Propósito**
+
+Permitir al gestor **avanzar el estado D&D de un contenedor y comprender al instante su
+impacto económico**, evaluando la situación global de la cartera *de un vistazo*. Se apoya en
+el principio de **visibilidad del estado del sistema** y en la **codificación por color** del
+semáforo (§2.4): el color comunica el nivel de riesgo sin obligar a leer fechas ni calcular
+costes, y la metáfora de **«mover»** un contenedor de columna refleja literalmente lo que
+ocurre en el negocio, reduciendo la carga cognitiva.
+
 ![Prototipo B — el gestor parte de la home pública e inicia sesión](img/flujos/prototipo-b-gestor.png)
 
 **Recorrido paso a paso**
@@ -480,6 +498,15 @@ sin recargar la página.
 | **Diseño** | [Flujo C en Figma](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-52693) |
 | **Prototipo** | [Prototipo C navegable](https://www.figma.com/proto/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-56321&scaling=min-zoom&content-scaling=fixed&page-id=4%3A5&starting-point-node-id=1335%3A56321) |
 | **Componente (Figma)** | [Flujo - C (Editar el Rol de un usuario)](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1335-52693&t=AnHUYd7ucHo2HIGm-1) |
+
+**Propósito**
+
+Permitir al administrador **gestionar los permisos cambiando el rol de un usuario** desde un
+único panel, con confirmación inmediata y sin perder el contexto. Materializa el principio de
+**mínimo privilegio** —la asignación de roles se centraliza en un lugar accesible solo al
+administrador, lo que la hace clara y auditable— y la **visibilidad y reversibilidad de las
+acciones**: el nuevo rol se refleja al instante en la propia tarjeta del usuario, sin recargar
+la página, y el administrador dueño queda protegido para no poder degradarse ni eliminarse.
 
 ![Prototipo C — el administrador parte de la home pública e inicia sesión](img/flujos/prototipo-c-admin.png)
 
