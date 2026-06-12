@@ -115,4 +115,4 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
 > **Conclusión:** pese a ser el rol con más pantallas (8), el gestor mantiene la misma
 > **gramática visual**, reutiliza patrones (rejilla de tarjetas, paneles de formulario,
 > colores de estado) entre Semáforo, Tarifas, Almacén e Historial, y cumple en cada
-> página **lo declarado en el README**, reduciendo la curva de aprendizaje entre vistas.
+> página **lo declarado en el README**.
