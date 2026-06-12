@@ -66,10 +66,10 @@ y explica de dónde nacen esas decisiones:
 
 - **Mundo marítimo-portuario.** Predominan contenedores apilados, terminales, grúas,
   buques y patios de almacenaje: es el universo real del usuario y la razón de que la
-  identidad gire en torno al **azul** (mar, cielo y contenedores) — ver §2.1.
+  identidad gire en torno al **azul** (mar, cielo y contenedores).
 - **El color como estado.** Los contenedores aparecen en múltiples colores (naranja,
   azul, verde, rojo); esa policromía inspira usar el color para **codificar el estado**
-  (el semáforo D&D de §2.4), reservando el azul para la marca.
+  (el semáforo D&D), reservando el azul para la marca.
 - **El dato central: el código BIC.** Varias imágenes destacan los códigos
   identificativos (p. ej. `SLZU 261577`), el dato que el operador captura por OCR y sobre
   el que se apoya toda la trazabilidad.
@@ -80,15 +80,14 @@ y explica de dónde nacen esas decisiones:
   coherente con una interfaz **clara y sin ornamento**, centrada en el dato.
 
 En síntesis, el moodboard justifica que Fluster adopte una estética **industrial-marítima,
-azul y centrada en el estado**: las decisiones de color (§2) y tipografía (§3) responden a
+azul y centrada en el estado**: las decisiones de color y tipografía responden a
 esta referencia visual.
 
 ### Guía de estilos visual
 
 La **guía de estilos** (*style guide*) consolida en un único lienzo todos los fundamentos
 del sistema —iconos, tipografía, inputs, bordes/sombras, colores y espaciado— en sus dos
-temas. Es la **base** del sistema visual: las secciones de **color (§2)** y **tipografía
-(§3)** que siguen **desglosan y justifican** lo que aquí se consolida. Sus valores son
+temas. Es la **base** del sistema visual: las secciones de **color** y **tipografía** que siguen **desglosan y justifican** lo que aquí se consolida. Sus valores son
 exactamente los `--variables` del sistema, no copias, de
 modo que diseño e implementación nunca divergen.
 
@@ -98,14 +97,14 @@ modo que diseño e implementación nunca divergen.
 
 - **Refleja el sistema de variables, no lo duplica.** Los colores (Primario, Texto, Semáforo,
   Auxiliar), la escala tipográfica y los espaciados del lienzo son los mismos valores
-  definidos en el sistema (§2, §3): **diseño e implementación nunca
+  definidos en el sistema: **diseño e implementación nunca
   divergen**.
 - **Documenta estados, no solo valores.** Muestra los componentes en sus variantes —botones
   (*hover / default / off*), inputs (normal / error / foco), checkbox—, base de la
   **consistencia interactiva** de toda la app.
 - **Doble tema.** La tipografía y los componentes se presentan en **claro y oscuro**,
-  evidenciando que el sistema soporta ambos (§2.5) sin excepciones.
-- **Escalas compartidas (8px).** Tipografía y espaciado usan el mismo módulo de 8px (§3.3),
+  evidenciando que el sistema soporta ambos sin excepciones.
+- **Escalas compartidas (8px).** Tipografía y espaciado usan el mismo módulo de 8px,
   de modo que todo «encaja» en una retícula común.
 - **Iconografía catalogada.** Los iconos se agrupan por uso (*General · Action ·
   Navigation*) formando un set coherente; exportados con `currentColor`, heredan el color
@@ -114,7 +113,7 @@ modo que diseño e implementación nunca divergen.
   fijan el «grano» visual de tarjetas, inputs y modales en todo el producto.
 
 En conjunto, la guía de estilos es la **prueba de consistencia**: si una pantalla usa algo
-que no aparece aquí, se sale del sistema. Por eso cada flujo (§4) puede justificarse «según
+que no aparece aquí, se sale del sistema. Por eso cada flujo puede justificarse «según
 lo declarado», porque *lo declarado* vive, visualmente, en este lienzo.
 
 ---
@@ -132,7 +131,7 @@ sino semántica:
   azul transmite fiabilidad y serenidad, apropiado para una herramienta que maneja
   costes y decisiones operativas.
 - **Neutralidad cromática.** Al reservar el rojo, el amarillo y el verde para la
-  **señalización de estado** (ver §2.4), la marca necesitaba un color que *no*
+  **señalización de estado**, la marca necesitaba un color que *no*
   compitiera con esa semántica. El azul cumple ese papel.
 
 | variables | Claro | Oscuro | Uso |
@@ -360,11 +359,7 @@ a entrada manual si el reconocimiento falla.
 
 ![Prototipo A — el operador entra ya autenticado en su home privada](img/flujos/prototipo-a-operador.png)
 
-> **⚠️ Acceso al prototipo — se entra ya logueado.** A diferencia de los flujos B y C,
-> este **primer flujo arranca con el operador ya autenticado**: el prototipo entra
-> directamente en la **home privada del operador** (menú *Meter contenedor · Contenedores ·
-> Perfil*), **sin pasar por la pantalla de inicio de sesión**. Para recorrerlo, accede a la
-> página de Figma **ya logueado** —o inicia sesión— y partirás de esta pantalla.
+
 
 **Recorrido paso a paso**
 
@@ -372,7 +367,7 @@ a entrada manual si el reconocimiento falla.
 
 ![Paso 1 — Home del operador](img/flujos/flujo-a-1-home.png)
 
-Tras iniciar sesión, el operador aterriza en su página de inicio. El *hero*
+Tras volver a la pagina de Fluster con la sesion ya iniciada, el operador aterriza en su página de inicio. El *hero*
 **«Introduce contenedores»** y el menú superior (**Meter contenedor · Contenedores ·
 Perfil**) son los puntos de entrada a la tarea. El bloque «Lo que puedes hacer con
 Fluster» recuerda, entre las capacidades, el alta de **contenedores mediante OCR**.
@@ -436,7 +431,7 @@ unidad ya incluida** (`HGTU2617083`), cerrando el bucle de la tarea.
 Permitir al gestor **avanzar el estado D&D de un contenedor y comprender al instante su
 impacto económico**, evaluando la situación global de la cartera *de un vistazo*. Se apoya en
 el principio de **visibilidad del estado del sistema** y en la **codificación por color** del
-semáforo (§2.4): el color comunica el nivel de riesgo sin obligar a leer fechas ni calcular
+semáforo,el color comunica el nivel de riesgo sin obligar a leer fechas ni calcular
 costes, y la metáfora de **«mover»** un contenedor de columna refleja literalmente lo que
 ocurre en el negocio, reduciendo la carga cognitiva.
 
@@ -465,7 +460,7 @@ lo dirige a su área de trabajo.
 Vista central del gestor: los contenedores aparecen **agrupados por nivel de riesgo
 D&D** en columnas de color —**sin coste aplicado** (verde), **primer tramo** (amarillo),
 **segundo tramo** (rojo) e **inactivo** (gris)—, cada uno con su coste asociado. Es la
-materialización directa de la metáfora cromática descrita en §2.4. Para avanzar una
+materialización directa de la metáfora cromática descrita con anterioridad. Para avanzar una
 unidad, el gestor usa los **controles de estado de su tarjeta**.
 
 **Paso 4 · Estado movido (tablero actualizado)**

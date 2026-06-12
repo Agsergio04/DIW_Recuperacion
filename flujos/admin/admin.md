@@ -4,7 +4,7 @@
 > los usuarios y sus permisos** en la plataforma. Para cada página se justifica su
 > **coherencia y consistencia visual**, su **estructura de la información** y su
 > **alineación con el sistema declarado** en el [README principal](../../README.md) (variables
-> de color §2, tipografía §3, retícula, radio, moodboard…).
+> de color, tipografía, retícula, radio, moodboard…).
 
 **Gramática visual compartida** (base de la *consistencia*): cabecera azul
 (`--color-primary`) con logo-ancla + navegación (**Panel de control · Perfil**) e
@@ -21,9 +21,8 @@ títulos en **Crimson Text** y cuerpo/UI en **Arimo**; tarjetas y paneles con **
   capacidades con radio/sombra estándar.
 - **Estructura de la información:** *hero* (propuesta de valor + CTA) y tres tarjetas
   resumen. De lo general a la acción.
-- **Según el sistema declarado (README):** *hero* en **Crimson Text** (§3.1) y cuerpo en
-  **Arimo** (§3.2); **azul de marca** `--color-primary` (§2.1); estética del **moodboard**
-  (§1); **radio 12px** y **escala de 8px** (§3.3).
+- **Según el sistema declarado (README):** *hero* en **Crimson Text** y cuerpo en
+  **Arimo**; **azul de marca** `--color-primary`; estética del **moodboard**; **radio 12px** y **escala de 8px**.
 
 ## 2 · Iniciar sesión
 ![Login](../../img/admin/02-login.png)
@@ -32,8 +31,7 @@ títulos en **Crimson Text** y cuerpo/UI en **Arimo**; tarjetas y paneles con **
   botones estándar del sistema.
 - **Estructura de la información:** formulario mínimo (correo + contraseña) y enlace a
   Registro. Solo lo imprescindible para acceder.
-- **Según el sistema declarado (README):** **variables** de input/botón (§2.3) y tipografía
-  (§3); **azul de marca** (§2.1) sobre `--color-primary-off`.
+- **Según el sistema declarado (README):** **variables** de input/botón y tipografía; **azul de marca** sobre `--color-primary-off`.
 
 ## 3 · Panel de control
 ![Panel de control](../../img/admin/03-panel-de-control.png)
@@ -45,10 +43,10 @@ títulos en **Crimson Text** y cuerpo/UI en **Arimo**; tarjetas y paneles con **
   el selector **Admin · Gestor · Operador** y la acción «Borrar usuario». El administrador
   dueño aparece marcado como **«Rol protegido»** (no degradable ni eliminable). Buscador
   rápido arriba y paginación abajo. Identidad y acciones agrupadas por tarjeta.
-- **Según el sistema declarado (README):** tarjetas en **`--color-secondary`** (§2.2) con
-  **radio 12px** sobre la **retícula de 1224px**; nombre en **Crimson** (§3.1) y datos en
-  **Arimo** (§3.2); botones de rol con **variables**; al usar solo variables, hereda sin
-  esfuerzo el **tema claro/oscuro** (§2.5).
+- **Según el sistema declarado (README):** tarjetas en **`--color-secondary`** con
+  **radio 12px** sobre la **retícula de 1224px**; nombre en **Crimson** y datos en
+  **Arimo**; botones de rol con **variables**; al usar solo variables, hereda sin
+  esfuerzo el **tema claro/oscuro**.
 
 ## 4 · Perfil
 ![Perfil](../../img/admin/04-perfil.png)
@@ -57,7 +55,7 @@ títulos en **Crimson Text** y cuerpo/UI en **Arimo**; tarjetas y paneles con **
   Perfil de operador y gestor salvo los datos; el admin protegido conserva el mismo patrón.
 - **Estructura de la información:** identidad (foto + nombre + rol + correo) separada de las
   acciones de cuenta (cambiar nombre, contraseña con requisitos, cerrar sesión).
-- **Según el sistema declarado (README):** **variables** (§2.3) + tipografía dual (§3) +
+- **Según el sistema declarado (README):** **variables** + tipografía dual +
   **radio 12px** y escala de 8px; mismos componentes que el resto, prueba del **sistema de
   variables único**.
 

@@ -4,7 +4,7 @@
 > **da de alta y mantiene los contenedores** que registra. Para cada página se justifica
 > su **coherencia y consistencia visual**, su **estructura de la información** y su
 > **alineación con el sistema declarado** en el [README principal](../../README.md) (variables
-> de color §2, tipografía §3, retícula, radio, moodboard…).
+> de color, tipografía, retícula, radio, moodboard…).
 
 **Gramática visual compartida por todas las páginas** (base de la *consistencia*):
 cabecera azul (`--color-primary`) con el logo-ancla a la izquierda y navegación +
@@ -24,10 +24,10 @@ con enlaces legales. Lo único que cambia entre pantallas es el contenido.
 - **Estructura de la información:** patrón *hero* (titular + subtítulo + CTA «Iniciar
   sesión / Empieza ahora») y, debajo, tres tarjetas de capacidades. Jerarquía descendente:
   primero la propuesta de valor, luego la acción.
-- **Según el sistema declarado (README):** *hero* en **Crimson Text** (§3.1) y cuerpo/CTA
-  en **Arimo** (§3.2); **azul de marca** `--color-primary` (§2.1) sobre `--color-primary-off`;
-  tarjetas con **radio 12px** y **escala de 8px** (§3.3). La estética azul-marítima responde
-  directamente al **moodboard** (§1).
+- **Según el sistema declarado (README):** *hero* en **Crimson Text** y cuerpo/CTA
+  en **Arimo**; **azul de marca** `--color-primary` sobre `--color-primary-off`;
+  tarjetas con **radio 12px** y **escala de 8px**. La estética azul-marítima responde
+  directamente al **moodboard**.
 
 ## 2 · Registro
 ![Registro](../../img/operador/02-registro.png)
@@ -38,9 +38,8 @@ con enlaces legales. Lo único que cambia entre pantallas es el contenido.
   contraseña **con los requisitos visibles** → repetir) y, al final, **«Rol asignado»**
   para elegir operador o gestor antes de «Crear cuenta». Mostrar los requisitos *antes* de
   fallar es prevención de errores.
-- **Según el sistema declarado (README):** tipografía dual **Crimson/Arimo** (§3.1–§3.2);
-  inputs y botones con **variables** de color, y los requisitos en `--color-text-subtle`
-  (§2.3); cumple la norma del README de **usar solo variables, nunca hex directos**.
+- **Según el sistema declarado (README):** tipografía dual **Crimson/Arimo**;
+  inputs y botones con **variables** de color, y los requisitos en `--color-text-subtle`; cumple la norma del README de **usar solo variables, nunca hex directos**.
 
 ## 3 · Iniciar sesión
 ![Login](../../img/operador/03-login.png)
@@ -49,8 +48,7 @@ con enlaces legales. Lo único que cambia entre pantallas es el contenido.
   Registro; refuerza la idea de un único «espacio de acceso».
 - **Estructura de la información:** formulario mínimo (correo + contraseña) con enlace
   secundario a Registro. Solo lo imprescindible para entrar.
-- **Según el sistema declarado (README):** mismas **variables** de input/botón y tipografía
-  (§3) que Registro; **azul de marca** (§2.1) y fondo `--color-primary-off`; el botón aplica
+- **Según el sistema declarado (README):** mismas **variables** de input/botón y tipografía que Registro; **azul de marca** y fondo `--color-primary-off`; el botón aplica
   el patrón con *spinner* de carga descrito en el sistema.
 
 ## 4 · Contenedores
@@ -62,9 +60,9 @@ con enlaces legales. Lo único que cambia entre pantallas es el contenido.
 - **Estructura de la información:** título + subtítulo, **buscador rápido** y la cuadrícula
   de los contenedores del operador. Cada tarjeta agrupa foto, código BIC, fecha de
   inclusión y acciones (editar / eliminar). Cuadrícula fluida que refluye 3→2→1.
-- **Según el sistema declarado (README):** tarjetas en **`--color-secondary`** (§2.2) con
-  **radio 12px** sobre la **retícula de 1224px**; código BIC y fechas en **Arimo** (§3.2)
-  para legibilidad del dato; títulos en **Crimson** (§3.1).
+- **Según el sistema declarado (README):** tarjetas en **`--color-secondary`** con
+  **radio 12px** sobre la **retícula de 1224px**; código BIC y fechas en **Arimo**
+  para legibilidad del dato; títulos en **Crimson**.
 
 ## 5 · Meter contenedor
 ![Meter contenedor](../../img/operador/05-meter-contenedor.png)
@@ -76,7 +74,7 @@ con enlaces legales. Lo único que cambia entre pantallas es el contenido.
   en una sola pantalla elimina decisiones previas y se adapta a cada situación.
 - **Según el sistema declarado (README):** paneles **`--color-surface`** con **radio 12px**
   y **sombra** de la escala declarada; iconos SVG con `currentColor` (heredan el color del
-  texto, coherentes con el tema §2.5); tipografía §3.
+  texto, coherentes con el tema); tipografía.
 
 ## 6 · Perfil
 ![Perfil](../../img/operador/06-perfil.png)
@@ -87,8 +85,8 @@ con enlaces legales. Lo único que cambia entre pantallas es el contenido.
 - **Estructura de la información:** la **identidad** (foto + nombre + rol + correo) se
   separa de las **acciones de cuenta** (cambiar nombre, cambiar contraseña con requisitos,
   cerrar sesión). Primero se lee, después se edita.
-- **Según el sistema declarado (README):** paneles y campos con **variables** (§2.3),
-  tipografía dual (§3), **radio 12px** y **escala de 8px** (§3.3); reutiliza exactamente los
+- **Según el sistema declarado (README):** paneles y campos con **variables**,
+  tipografía dual, **radio 12px** y **escala de 8px**; reutiliza exactamente los
   mismos componentes que el resto, prueba del **sistema de variables único**.
 
 ---
@@ -96,5 +94,5 @@ con enlaces legales. Lo único que cambia entre pantallas es el contenido.
 > **Conclusión:** las seis páginas comparten una **gramática visual única** (cabecera,
 > retícula de 1224px, tipografía dual Crimson/Arimo, tarjetas y paneles definidos por variables),
 > ordenan la información **de lo general a lo accionable** y cumplen, una a una, **lo
-> declarado en el README** (colores §2, tipografía §3, radios y espaciado), haciendo el
+> declarado en el README** (colores, tipografía, radios y espaciado), haciendo el
 > recorrido predecible y verificable.

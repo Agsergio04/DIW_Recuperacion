@@ -4,7 +4,7 @@
 > estado D&D de los contenedores, gestiona las tarifas navieras, el almacén y genera
 > informes**. Para cada página se justifica su **coherencia y consistencia visual**, su
 > **estructura de la información** y su **alineación con el sistema declarado** en el
-> [README principal](../../README.md) (variables de color §2, tipografía §3, retícula, radio,
+> [README principal](../../README.md) (variables de color, tipografía, retícula, radio,
 > moodboard…).
 
 **Gramática visual compartida** (base de la *consistencia*): cabecera azul
@@ -22,9 +22,9 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
   producto; tarjetas de capacidades con el radio/sombra estándar.
 - **Estructura de la información:** *hero* con propuesta de valor y CTA, y tres tarjetas
   resumen. De lo general (qué es) a la acción (entrar).
-- **Según el sistema declarado (README):** *hero* en **Crimson Text** (§3.1) y cuerpo en
-  **Arimo** (§3.2); **azul de marca** `--color-primary` (§2.1); estética azul-marítima del
-  **moodboard** (§1); tarjetas con **radio 12px** y **escala de 8px** (§3.3).
+- **Según el sistema declarado (README):** *hero* en **Crimson Text** y cuerpo en
+  **Arimo**; **azul de marca** `--color-primary`; estética azul-marítima del
+  **moodboard**; tarjetas con **radio 12px** y **escala de 8px**.
 
 ## 2 · Registro
 ![Registro](../../img/gestor/02-registro.png)
@@ -33,8 +33,8 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
   inputs, botones y lista de requisitos.
 - **Estructura de la información:** alta de cuenta de arriba abajo con requisitos de
   contraseña visibles y selección de **rol** (operador/gestor) antes de crear la cuenta.
-- **Según el sistema declarado (README):** tipografía dual **Crimson/Arimo** (§3.1–§3.2);
-  inputs/botones con **variables** y texto auxiliar en `--color-text-subtle` (§2.3); **solo
+- **Según el sistema declarado (README):** tipografía dual **Crimson/Arimo**;
+  inputs/botones con **variables** y texto auxiliar en `--color-text-subtle`; **solo
   variables, nunca hex directos**.
 
 ## 3 · Iniciar sesión
@@ -44,8 +44,7 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
   «espacio de acceso».
 - **Estructura de la información:** formulario mínimo (correo + contraseña) y enlace a
   Registro. Solo lo necesario para entrar.
-- **Según el sistema declarado (README):** mismas **variables** de input/botón y tipografía
-  (§3); **azul de marca** (§2.1) sobre `--color-primary-off`.
+- **Según el sistema declarado (README):** mismas **variables** de input/botón y tipografía; **azul de marca** sobre `--color-primary-off`.
 
 ## 4 · Semáforo (Estado de los contenedores)
 ![Semáforo](../../img/gestor/04-semaforo.png)
@@ -56,10 +55,9 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
 - **Estructura de la información:** tablero **agrupado por nivel de riesgo D&D** (sin coste
   · primer tramo · segundo tramo · inactivo); cada tarjeta muestra el contenedor y su coste
   asociado. Permite leer la situación global **de un vistazo** sin cálculos.
-- **Según el sistema declarado (README):** **aplicación directa de los colores semánticos
-  de §2.4** — `--color-sin_costes` (verde), `--color-primer_tramo` (amarillo),
+- **Según el sistema declarado (README):** **aplicación directa de los colores semánticos** — `--color-sin_costes` (verde), `--color-primer_tramo` (amarillo),
   `--color-segundo_tramo` (rojo) e `--color-inactivo` (gris); tarjetas con **radio 12px**,
-  tipografía §3 y respeto de la **separación fondo/texto** declarada para cumplir contraste.
+  tipografía y respeto de la **separación fondo/texto** declarada para cumplir contraste.
 
 ## 5 · Tarifas
 ![Tarifas](../../img/gestor/05-tarifas.png)
@@ -70,9 +68,9 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
 - **Estructura de la información:** una fila por **naviera**; columnas agrupadas en *Tiempo
   (días)* (free time, límite de primer tramo) y *Tarifas (€/día)* (sin costes, primer y
   segundo tramo). Buscador arriba. Edición en línea por fila.
-- **Según el sistema declarado (README):** los tramos reutilizan **amarillo/rojo de §2.4**;
-  cabeceras y celdas con la **escala tipográfica** (§3.3) en **Arimo** (§3.2) para densidad
-  de datos, y separadores en `--color-border` (§2.3); botones con variables.
+- **Según el sistema declarado (README):** los tramos reutilizan **amarillo/rojo**;
+  cabeceras y celdas con la **escala tipográfica** en **Arimo** para densidad
+  de datos, y separadores en `--color-border`; botones con variables.
 
 ## 6 · Almacén
 ![Almacén](../../img/gestor/06-almacen.png)
@@ -84,8 +82,8 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
   cuadrícula con buscador; abajo, **«Generar informe general»** con filtros de fecha y
   opciones. Consulta y reporte en una misma página.
 - **Según el sistema declarado (README):** **retícula de tarjetas de 1224px** y
-  **`--color-secondary`** (§2.2) con **radio 12px**; el panel de informe usa inputs
-  con variables (§2.3) y tipografía §3, sin romper la gramática del resto de vistas.
+  **`--color-secondary`** con **radio 12px**; el panel de informe usa inputs
+  con variables y tipografía, sin romper la gramática del resto de vistas.
 
 ## 7 · Historial del contenedor
 ![Historial](../../img/gestor/07-historial.png)
@@ -98,8 +96,8 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
   orden, con **«Generar informe»**; a la izquierda, los ciclos o el estado vacío y «Volver
   al almacén». Filtros y resultados conviven sin cambiar de pantalla.
 - **Según el sistema declarado (README):** paneles `--color-surface`/`--color-secondary`
-  con **radio 12px**; el estado vacío en **Crimson Text** (§3.1); inputs de filtro
-  con variables (§2.3) y **espaciado de 8px** (§3.3) entre campos.
+  con **radio 12px**; el estado vacío en **Crimson Text**; inputs de filtro
+  con variables y **espaciado de 8px** entre campos.
 
 ## 8 · Perfil
 ![Perfil](../../img/gestor/08-perfil.png)
@@ -108,7 +106,7 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
   Perfil de operador y admin salvo los datos.
 - **Estructura de la información:** identidad (foto + nombre + rol + correo) separada de las
   acciones de cuenta (cambiar nombre, contraseña con requisitos, cerrar sesión).
-- **Según el sistema declarado (README):** **variables** (§2.3) + tipografía dual (§3) +
+- **Según el sistema declarado (README):** **variables** + tipografía dual +
   **radio 12px** y escala de 8px; reutiliza los mismos componentes que el resto, prueba del
   **sistema de variables único**.
 
@@ -116,5 +114,5 @@ Perfil**) e interruptor de tema; fondo `--color-primary-off`; contenido centrado
 
 > **Conclusión:** pese a ser el rol con más pantallas (8), el gestor mantiene la misma
 > **gramática visual**, reutiliza patrones (rejilla de tarjetas, paneles de formulario,
-> colores de estado §2.4) entre Semáforo, Tarifas, Almacén e Historial, y cumple en cada
+> colores de estado) entre Semáforo, Tarifas, Almacén e Historial, y cumple en cada
 > página **lo declarado en el README**, reduciendo la curva de aprendizaje entre vistas.
