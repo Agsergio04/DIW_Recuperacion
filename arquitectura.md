@@ -2,8 +2,8 @@
 
 > Cómo se **usa** Fluster: qué hace cada rol, su recorrido principal y el flujo general de la
 > aplicación, desarrollando las **decisiones de diseño** que lo explican. Los recorridos
-> completos, pantalla a pantalla, están en [`flujos/`](flujos/); la implementación real es el
-> repositorio [Fluster](https://github.com/Agsergio04/Fluster).
+> completos, pantalla a pantalla, están en [`flujos/`](flujos/).
+
 
 ---
 
@@ -24,13 +24,16 @@ queda disponible para cualquier rol autenticado.
 ## 2. Rol de operador
 
 El operador trabaja **a pie de terminal**: necesita registrar contenedores deprisa y sin
-errores. Por eso su punto de entrada es el **listado de contenedores** y el alta asistida por
-**OCR**, y no los datos económicos, que no le competen.
+errores. Por eso su punto de entrada son **sus contenedores** y el alta asistida por **OCR**, y
+no los datos económicos, que no le competen. El aterrizaje **se adapta a su situación**: si ya
+tiene unidades registradas entra en el **listado de Contenedores**; si aún no tiene ninguna
+—por ejemplo, la primera vez— va directamente a **Meter contenedor**.
 
 Su recorrido principal es este:
 
 1. Login.
-2. Acceso a su listado de **Contenedores**.
+2. Aterrizaje según su situación: el **listado de Contenedores** si ya tiene unidades, o
+   directamente **Meter contenedor** si todavía no tiene ninguna.
 3. **Meter contenedor**: sube una foto y el OCR extrae el código BIC.
 4. Verificación del código y alta del contenedor.
 5. El listado se actualiza con la nueva unidad ya incluida.
@@ -40,7 +43,8 @@ introducir un contenedor debe traducirse al instante en una nueva tarjeta en el 
 porque eso refuerza la utilidad de la herramienta. Además, apoyarse en el OCR convierte una
 tarea de **transcripción** (teclear 11 caracteres) en una de **verificación**, más rápida y
 fiable; y si el reconocimiento falla, el flujo degrada a entrada manual sin callejones sin
-salida.
+salida. El **aterrizaje adaptativo** persigue lo mismo: al operador que todavía no tiene nada
+que mirar se le ahorra un paso y se le lleva directo a dar de alta.
 
 ---
 
@@ -101,13 +105,16 @@ flowchart TD
     REG --> ROL{"Rol del usuario"}
     AUTH -->|Sí| ROL
 
-    ROL -->|Operador| OP1["Contenedores /contenedores"]
-    OP1 --> OP2["Meter contenedor /meter-contenedor"]
+    ROL -->|Operador| OPQ{"¿Ya tiene contenedores?"}
+    OPQ -->|Sí| OP1["Contenedores /contenedores"]
+    OPQ -->|No| OP2["Meter contenedor /meter-contenedor"]
+    OP1 --> OP2
     OP2 --> OP3["Listado actualizado"]
 
     ROL -->|Gestor| GE1["Semáforo /semaforo"]
     GE1 --> GE2["Mover estado del contenedor"]
     GE2 --> GE3["Tablero y coste actualizados"]
+    GE3 --> GE4["Tarifa"]
 
     ROL -->|Admin| AD1["Panel de control /panel-de-control"]
     AD1 --> AD2["Cambiar rol de un usuario"]
