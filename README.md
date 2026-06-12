@@ -6,6 +6,8 @@
 
 | Titulo | Enlace |
 |---|---|
+| Arquitectura de la aplicación | [arquitectura.md](arquitectura.md) |
+| Código fuente (Fluster) | [GitHub — Fluster](https://github.com/Agsergio04/Fluster) |
 | Archivo de diseño | [Proyecto — Fluster](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=0-1) |
 | Guía de estilos | [Guía de estilos en Figma](https://www.figma.com/design/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=4-8) |
 | Flujo nuevo del Admin | [Ver prototipo](https://www.figma.com/proto/Jf6d7039UDcHaFClx7Rlby/Proyecto---Fluster?node-id=1326-41498&scaling=min-zoom&content-scaling=fixed&page-id=4%3A5&starting-point-node-id=1326%3A41498&show-proto-sidebar=1) |
